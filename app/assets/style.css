@@ -1,0 +1,233 @@
+/* reseteo de cajas y margenes */
+html {
+  box-sizing: content-box;
+  font-size: 16px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+li{
+  list-style: none;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #e8e8e8;
+  font-family: sans-serif;
+}
+
+a {
+  color: #e8e8e8;
+  text-decoration: none;
+}
+
+.header, footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: linear-gradient(
+    135deg,
+    rgb(2, 3, 129) 0%,
+    rgb(40, 116, 252) 100%
+  );
+  color: white;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100; 
+}
+
+.logo{
+  width: 100px;
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+  } 
+}
+
+/* scroll */
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ffcd52, #fbb03b 100%);
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+/* main content */
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 50%;
+  }
+}
+.selector{
+  width: 350px;
+  margin-bottom: 30px;
+}
+
+#selectorField, #selectorField2{
+  width: 100%;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+#selectorField .icon, #selectorField2 .icon2{
+  width: 12px;
+}
+
+#selectorField img, #selectorField2 img{
+  width: 30px;
+  margin-right: 8px;
+}
+
+#selectorField .iconC, #selectorField2 .iconC{
+  display: flex;
+  align-items: center;
+}
+
+#selectorField .arrowC, #selectorField2 .arrowC{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+#selectorField .iconC p, #selectorField2 .iconC p {
+  color: black;
+  font-weight: bold;
+}
+
+#list, #list2 {
+  margin-top: 30px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  max-height: 0;
+}
+
+#list:not(.hidden), #list2:not(.hidden) {
+  max-height: 300px; 
+}
+
+.options, .options2{
+  width: 100%;
+  padding: 15px 0 15px 70px;
+  cursor: pointer;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.options img, .options2 img {
+  width: 25px;
+  position: absolute;
+  top: 12px;
+  left: 25px;
+
+}
+
+.options:hover, .options2:hover {
+  background-color: #F3F4F6;
+}
+
+.hidden{
+  visibility: hidden;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.conversion{
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #fff;
+  cursor: pointer;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+.conversion:hover {
+  border: 1px solid white;
+}
+
+.conversion:active {
+  box-shadow: 4px 4px 12px #c5c5c5, -4px -4px 12px #ffffff;
+}
+
+.result {
+  margin: 20px;
+  font-weight: bold;
+}
+
+.value{
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #fff;
+  cursor: pointer;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  margin: 20px;
+}
